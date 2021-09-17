@@ -1,0 +1,152 @@
+
+.row {
+    --bs-gutter-x: 0;
+}
+// mixin
+@mixin prod_container () {
+    height: 540px;
+    width: 318px;
+    position: relative;
+}
+//PROMO
+.background_video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+}
+
+.logo {
+    height: 250px;
+}
+
+.promo_prod_container {
+    @include prod_container ();
+}
+.promo .btn-warning {
+    margin-top: 20px;
+}
+//characteristic
+.characteristic {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+i {
+    border: solid rgb(212, 0, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    
+}
+//COMPOSITION
+.composition_row {
+    margin-top: 200px;
+    background: linear-gradient(#9A5044, #E8D9A9) fixed;
+    width: 100%;
+}
+
+.composition_img{
+    margin-top: 140px;
+    margin-bottom: 90px;
+}
+
+.composition .btn-warning {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+//COMMENT
+.carousel {
+    background: linear-gradient(#c0f012, #009619) fixed;
+    width: 100%;
+}
+
+.carousel_item {
+    width: 350px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 300px;
+}
+.carousel-caption {
+    margin-top: 150px;
+}
+
+.comment p {
+    margin-top: 50px;
+}
+//PROMO_2
+.promo_2-row {
+    background: linear-gradient(#12d6f0, #000000) fixed;
+    width: 100%;
+}
+
+.promo_2_prod_container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    height: 400px;
+    width: 300px;
+    position: relative;
+}
+.description {
+    margin-bottom: 10px;
+}
+
+.promo_2 .btn-warning {
+    margin-top: 20px;
+}
+//ORDER
+.order {
+    background: linear-gradient(#f0e112, #5f41e7) fixed;
+    width: 100%;
+}
+
+.order_container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.order_prod_container {
+    @include prod_container ();
+    margin-bottom: 50px;
+}
+//countdown
+.countdown {
+    color: rgb(255, 0, 0);
+    font-size: 54px;
+    margin-bottom: 100px;
+}
+//price
+.order_prod_container h3 {
+    color: red;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+//order_form
+.name input::placeholder {
+    transition: 0.5s; /* Время трансформации */
+    color: #aaa; /* Цвет подсказки */
+   }
+.name input:focus::placeholder { 
+  font-size: 12px; /* Размер шрифта */
+  transform: translate(85%, -14px); /* Сдвигаем вверх */
+}
+.number input::placeholder {
+    transition: 0.5s; /* Время трансформации */
+    color: #aaa; /* Цвет подсказки */
+   }
+.number input:focus::placeholder { 
+  font-size: 12px; /* Размер шрифта */
+  transform: translate(80%, -14px); /* Сдвигаем вверх */
+}
